@@ -1,0 +1,197 @@
+:root {
+  --orange: #e68815;
+  --rose: #a71666;
+  --red: #d31638;
+  --blue: #83828253;
+  --green: rgba(38, 172, 15, 0.896);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.navBar {
+  height: 100%;
+  width: 185px;
+  position: fixed;
+  padding-top: 60px;
+  border-right: 1px solid #818181;
+}
+
+.navBar a {
+  padding: 8px 8px 8px 2px;
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--red);
+  /* display: block; */
+  display: inline-flex;
+  width: 85%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar a:hover {
+  color: var(--orange);
+}
+.mailsLength {
+  background-color: red;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 1rem;
+  font-size: 14px;
+}
+.main {
+  padding: 20px 15px 20px 200px;
+}
+
+.mailDetail {
+  text-align: left;
+  border-bottom: 2px solid blue;
+  padding: 10px 20px;
+}
+
+.mailDetail:hover {
+  background-color: rgba(211, 211, 211, 0.3);
+  box-shadow: 0px 6px 14px #888888;
+}
+
+.mailDetail button,
+.mailContent button {
+  position: relative;
+  padding: 8px 12px 6px;
+  border-radius: 20px;
+  margin: 0 15px 0 0;
+
+  font-size: 20px;
+  z-index: 1;
+}
+
+.sender {
+  color: var(--rose);
+}
+
+.content,
+.subject {
+  color: black;
+  padding-left: 15px;
+}
+.unread {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+.unread:hover {
+  background-color: var(--orange);
+  color: white;
+  border: 2px solid var(--orange);
+  cursor: pointer;
+}
+
+.delete {
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+.delete:hover {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  color: white;
+  cursor: pointer;
+}
+.spam {
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+.spam:hover {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  color: white;
+  cursor: pointer;
+}
+.restore {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+.restore:hover {
+  background-color: var(--orange);
+  color: white;
+  border: 2px solid var(--orange);
+  cursor: pointer;
+}
+.edit-mails {
+  float: right;
+}
+
+.viewMail,
+.link_in_viewpage {
+  color: var(--rose);
+
+  text-decoration: none;
+}
+.spam_delete .mailDetail {
+  padding: 5px 20px 15px;
+}
+.spam_delete .delete,
+.spam_delete .restore {
+  top: -11px;
+}
+
+.link_in_viewpage {
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.link_in_viewpage:hover {
+  background-color: var(--rose);
+  color: white;
+  padding: 10px 15px;
+}
+
+.info {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 18;
+}
+
+.mailContent {
+  box-shadow: 5px 10px 18px #888888;
+  text-align: left;
+  padding: 1rem 2rem;
+  margin: 2rem 1rem;
+}
+.subject_in_viewpage {
+  color: var(--red);
+}
+
+@media only screen and (max-width: 768px) {
+  .navBar {
+    padding: 0 0 10px 0;
+    border-right: 0;
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .navBar a {
+    font-size: 20px;
+  }
+  .main {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .edit-mails {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 10px 10px 0;
+  }
+}
